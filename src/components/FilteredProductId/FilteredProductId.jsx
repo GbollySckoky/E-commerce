@@ -7,7 +7,7 @@ import { GoChevronDown } from "react-icons/go";
 import { GoChevronUp } from "react-icons/go";
 import { addToCart } from '../../features/addCartSlice';
 import {useDispatch} from "react-redux";
-import Loading from '../../component/reusable/Loading'
+import Loading from '../reusable/Loading'
 import Datas from '../reusable/Datas'
 import EnhanceLook from './EnhanceLook'
 const links = [

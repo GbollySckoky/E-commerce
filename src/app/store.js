@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
-import productsSlice from '../features/productsSlice'
+import productsSlice from '../features/productSlice'
 import sliderSlice from '../features/sliderSlice'
 import addCartSlice from '../features/addCartSlice'
-import addFavouritesSlice from '../features/addFavouritesSlice'
+import addFavouritesSlice from '../features/addCartSlice'
 import getProductsSlice from '../features/getProductsSlice'
 export const store = configureStore({
   reducer: {

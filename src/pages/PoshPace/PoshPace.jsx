@@ -1,5 +1,5 @@
 import React from 'react'
-import Posh from '../../component/Home/Posh'
+import Posh from '../../components/Home/Posh'
 
 
 const PoshPace = () => {

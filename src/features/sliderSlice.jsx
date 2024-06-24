@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import DummyData  from "../component/DummyData";
+import DummyData  from "../components/DummyData";
 
 export const sliderSlice = createSlice({
   name: "slider",

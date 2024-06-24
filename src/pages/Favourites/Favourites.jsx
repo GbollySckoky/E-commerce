@@ -1,10 +1,10 @@
 import React from 'react'
-import Favourites from '../../component/Favourites'
+import Favourite from '../../components/Favourite/Favourite'
 // import Favourites from '../../component/Favourites/Favourites'
 const Favourites = () => {
   return (
     <div>
-        <Favourites />
+        <Favourite />
     </div>
   )
 }

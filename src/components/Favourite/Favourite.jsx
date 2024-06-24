@@ -9,7 +9,7 @@ import { removeFromFavourites } from '../../features/addFavouritesSlice';
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { addToCart } from '../../features/addCartSlice';
 
-  const Cart = () => {
+  const Favourite = () => {
   const { favourites } = useSelector((state) => state.favourites)
   const dispatch = useDispatch()
 
@@ -108,4 +108,4 @@ import { addToCart } from '../../features/addCartSlice';
   )
 }
 
-export default Cart
+export default Favourite
