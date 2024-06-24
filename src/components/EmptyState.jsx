@@ -9,7 +9,7 @@ const EmptyState = () => {
     <div className=''>
         <div className='w-[50%] pt-[239px] mx-auto '>
             <img 
-                className='h-[400px] bg-red-900'
+                className='h-[400px]'
                 src={error} 
                 alt="" />
         </div>

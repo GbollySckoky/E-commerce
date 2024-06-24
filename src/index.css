@@ -1,3 +1,73 @@
+@import url('https://fonts.cdnfonts.com/css/satoshi');   
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    font-family: 'Satoshi', sans-serif;
+  }
+  .btn{
+      font-family: "Sarina", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
+  #tip > div{
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  color: #001F3F;
+  }
+  #tips{
+    padding-left: 5px;
+  }
+  li{
+    list-style: none;
+  }
+  hr {
+    border: none; /* Remove default border */
+    height: 1px; /* Set height */
+    background-color: #000; /* Set background color */
+    margin: 20px 0; /* Add margin for spacing */
+  }
+  #did{
+    padding: 2px;
+  }
+  .imgs > img{
+  padding: 0 5px;
+  }
+  .slick-slider:focus {
+    outline: none;
+  }
+  .size:hover{
+    background-color: red;
+    color: white;
+  }
+  .carousel-item {
+    position: relative;
+    text-align: center;
+  }
+  
+  .carousel-image {
+    width: 100%; /* Ensure image fits container */
+    margin: 0 auto;
+  }
+  
+  .carousel-text {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+  }
+  /* In your CSS file or inline styles */
+  @keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+  }
+  
+  .animate-slide-in {
+    animation: slideIn 0.5s ease forwards;
+  }
+  

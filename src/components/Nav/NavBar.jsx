@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {Link, useNavigate } from 'react-router-dom'
-import { filteredProduct } from '../../features/productsSlice'
+import { filteredProduct } from '../../features/productSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import { TiShoppingCart } from "react-icons/ti";
 import { MdOutlineMenu } from "react-icons/md";

@@ -6,7 +6,7 @@ import FilteredProduct from './components/FilteredProduct/FilteredProduct'
 import FilteredProductId from './components/FilteredProductId/FilteredProductId'
 import {ToastContainer} from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css"
-import Cart from './pages/Cart/Cart'
+import Cart from './pages/Carts/Carts'
 import Favourite from './pages/Favourites/Favourites'
 import Footer from './components/Footer/Footer'
 import EnhanceLook from './components/FilteredProductId/EnhanceLook'

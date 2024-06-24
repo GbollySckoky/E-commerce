@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Heart } from 'react-feather'
+import {Heart} from 'react-feather'
 import { IoMdHeart } from "react-icons/io";
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom'
