@@ -6,10 +6,10 @@ import { GoArrowLeft } from "react-icons/go";
 
 const EmptyState = () => {
   return (
-    <div className=''>
-        <div className='w-[50%] pt-[239px] mx-auto '>
+    <div className='h-[84.2vh] flex flex-col justify-center pt-[246px]'>
+        <div className='w-[50%]  mx-auto '>
             <img 
-                className='h-[400px]'
+                className='lg:h-[400px]'
                 src={error} 
                 alt="" />
         </div>
@@ -19,7 +19,7 @@ const EmptyState = () => {
                     <GoArrowLeft
                     size={30} /> 
                 </span>
-                <p className='pl-3 text-2xl'> 
+                <p className='pl-3 lg:text-2xl'> 
                     Start Shopping
                  </p> 
             </Link>
