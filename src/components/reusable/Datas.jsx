@@ -667,7 +667,12 @@ const products = [
         "productDetails":"Product Details",
         "productName":"Short Sleeve Cuban Shirt - Off White",
         "productQuestion":"Product Details",
-        "size":"offwhite"
+        "size":[
+            "XXL",
+            "XL",
+            "L",
+            "M",
+        ]
     },
     {
         "category":"Men",
@@ -703,7 +708,7 @@ const products = [
         "black",
         "cream"
         ],
-        "id ":20,
+        "id":20,
         "productName": "Maimi Suite",
         "images":[
         "https://www.fashionnova.com/cdn/shop/products/10-04-22Studio5_KJ_DJ_09-41-26_1_FNMK144_Chestnut_P_3389_JB_468x@2x.jpg?v=1664916046",

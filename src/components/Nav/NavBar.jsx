@@ -41,7 +41,7 @@ const NavBar = () => {
                         <Link to={"#"}>News Letter</Link>
                     </li>
                 </ul>
-                <div className='btn text-2xl border-none bg-transparent'>
+                <div className='btn text-3xl  border-none bg-transparent'>
                     <Link to={"/"}>Posh Pace</Link>
                 </div>
                 <div className='flex text-sm font-thin'>

@@ -2,7 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 import { toast } from 'react-toastify';
 
 const initialState = {
-    favourites: localStorage.getItem("favourites") ? JSON.parse(localStorage.getItem("favourites")) : [],
+    favourites: localStorage.getItem("favourites") 
+    ? JSON.parse(localStorage.getItem("favourites")) 
+    : [],
 };
 
 export const addFavouritesSlice = createSlice({
