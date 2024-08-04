@@ -40,6 +40,8 @@ import { removeFromCart, deceraseProductCart, increaseProductCart, getTotals} fr
     return totalAmount;
 }
 
+const amount = 15000
+
   return (
     <div>
       <div className='pt-[150px]'>
