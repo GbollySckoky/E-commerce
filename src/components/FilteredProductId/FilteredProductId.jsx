@@ -10,6 +10,8 @@ import {useDispatch} from "react-redux";
 import Loading from '../reusable/Loading'
 import Datas from '../reusable/Datas'
 import EnhanceLook from './EnhanceLook'
+import { FaHeart } from "react-icons/fa";
+
 const links = [
   {name:"New Arrivals", id:1},
   {name:"Trending Now", id:2},
@@ -26,6 +28,16 @@ const FilteredProductId = () => {
     const [isOpen, setIsOpen] = useState(false);
     const { id } = useParams();
     const dispatch = useDispatch()
+    const [active, setActive] = useState(false);
+    const [images, setImages] = useState('')
+
+    
+    const handleSelectImage = (image) => {
+      setImages(image)
+    }
+    const handleActive = () =>{
+      setActive((prev) => !prev)
+    }
     
     const [data, setData]  = useState({})
     useEffect(() => {
@@ -43,6 +55,13 @@ const FilteredProductId = () => {
       }
     }, [ id ]);
 
+    useEffect(() => {
+      if (data.images && data.images.length > 0) {
+        setImages(data.images[0]); 
+      }
+    }, [data.images]);
+
+    
     if(isLoading) {
       return (
           <div>
@@ -64,6 +83,8 @@ const FilteredProductId = () => {
     const handleAddCart = (data) => {
       dispatch(addToCart(data));
     }
+
+   
 
   return (
     <div className='lg:pt-[164px] pt-[130px]'>
@@ -98,12 +119,31 @@ const FilteredProductId = () => {
                 <span className='font-[500] text-xl'>&#x20A6;{data.newPrice}</span>
                 <del className='text-sm ml-3'>&#x20A6;{data.oldPrice}</del>
               </div>
-              <span className='text-fade'>< Heart /></span> 
+              <span className='text-fade cursor-pointer' onClick={handleActive}>
+               {active ?  < FaHeart size={24} className='text-red-600'/> :  < Heart />}
+                </span> 
             </div>
 
             {/* image */}
-            <div className='w-[200px] border border-black p-3 mb-5' >
-                <img src={data.img} alt={data.productName} />
+            <div  className='mb-5' >
+                <img  
+                  src={images} 
+                  alt={data.productName} 
+                  className='w-[200px] border border-black p-3 mb-5'/>
+                <div className='w-[400px] '>
+                  {data.images && Array.isArray(data.images) && (
+                    <div className='flex gap-5'>
+                      { data.images.map((image) => (
+                      <div onClick={() => handleSelectImage(image)}  className="preview " key={image}>
+                        <img 
+                          className='cursor-pointer' 
+                          src={image} 
+                          alt={image.productName} />
+                      </div>
+                  ))}
+                    </div>
+                  )}
+                </div>
             </div>
 
             {/* sizes */}
