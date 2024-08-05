@@ -37,17 +37,13 @@ const NavBar = () => {
                     <li className='pr-6'>
                         <Link to={'#'}>Store Locator</Link>
                     </li>
-                    <li className='pr-6'>
-                        <Link to={"#"}>News Letter</Link>
-                    </li>
                 </ul>
                 <div className='btn text-3xl  border-none bg-transparent'>
                     <Link to={"/"}>Posh Pace</Link>
                 </div>
                 <div className='flex text-sm font-thin'>
-                    <li className='list-none pl-6'>
-                        <Link to={"/products/favourites"}> Favourites</Link> 
-                        
+                    <li className='pr-6'>
+                        <Link to={"#"}>News Letter</Link>
                     </li>
                     <li className='list-none pl-6 flex items-center'>
                         <Link to={"/products/shoppingbag"}>shopping Bag</Link>

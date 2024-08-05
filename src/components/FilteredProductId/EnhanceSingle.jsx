@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
-import { addToFavourites, removeFromFavourites} from '../../features/addFavouritesSlice';
 import { Heart } from 'react-feather';
 import { IoMdHeart } from 'react-icons/io';
 import { useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
+
 
 const EnhanceSingle = ({product}) => {
     const dispatch = useDispatch();
@@ -10,11 +11,10 @@ const EnhanceSingle = ({product}) => {
 
     const handleLikes = () => {
         setLikes(prev => !prev); // Toggle like state
-        if (!likes) {
-            // If product is not liked, dispatch addToFavourites action with product object
-            dispatch(addToFavourites(product));
-        } else {
-            dispatch(removeFromFavourites({ productId: product.i }));
+        if(!likes){
+            toast.success(`${product.productName} liked successfully`)
+        }else{
+            toast.error(`${product.productName} removed successfully`)
         }
     }
   return (
