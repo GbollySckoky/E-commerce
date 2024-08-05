@@ -1,23 +1,20 @@
 import React, { useState } from 'react';
-import { addToFavourites, removeFromFavourites } from '../../features/addFavouritesSlice';
 import { Heart } from 'react-feather';
 import { IoMdHeart } from 'react-icons/io';
-import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { useParams, Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const PoshDataSingle = ({ product }) => {
     const [likes, setLikes] = useState(false);
-    const dispatch = useDispatch();
     const { category } = useParams();
-
 
     const handleLikes = () => {
         setLikes(prev => !prev);
         if (!likes) {
-            dispatch(addToFavourites(product));
+            toast.success(`${product.productName} liked successfully`)
         } else {
-            dispatch(removeFromFavourites({ id: product.id, productName: product.productName }));
+            toast.error(`${product.productName} removed successfully`)
         }
     };
 
