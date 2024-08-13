@@ -17,7 +17,6 @@ const NavBar = () => {
     'Beauty',
     'Shoes & Accessories',
     'UnderWear',
-    'Sale',
 ]
     const dispatch = useDispatch()
     const [toggle, setToggle] = useState(false)
@@ -29,7 +28,8 @@ const NavBar = () => {
         <div>
         <div className='hidden lg:block ' >
             <nav 
-                className='flex items-center justify-between px-[100px] bg-fadeblue w-screen text-white h-[60px]'>
+                className='flex items-center justify-between px-[100px] 
+                bg-fadeblue w-screen text-white h-[60px]'>
                 <ul className='flex text-sm font-thin ' >
                     <li className='pr-6'>
                         <Link to={"#"}>Customer Service</Link>
@@ -61,7 +61,7 @@ const NavBar = () => {
         <div className='bg-fadeblue relative w-full lg:hidden '>
             { toggle &&
                 <nav 
-                    className=' absolute w-full bg-fadeblue text-white mt-[50px] pl-[22px] animate-slide-in'
+                    className='hidden absolute w-full bg-fadeblue text-white mt-[50px] pl-[22px] animate-slide-in'
                     >
                     <ul className='flex flex-col text-sm font-thin '>
                         <li className='py-4 text-base font-[400]'>
@@ -73,23 +73,14 @@ const NavBar = () => {
                         <li className='py-4 text-base font-[400]'>
                             <Link to={"#"}>News Letter</Link>
                         </li>
-                        <li className='list-none py-4 text-base font-[400]'>
-                            <Link to={"#"}>sign in</Link>
-                        </li>
-                        <li className='list-none py-4 text-base font-[400]'>
-                            <Link to={"/products/favourites"}> Favourites</Link> 
-                        </li>
-                        
                     </ul>
                 </nav>
             }
             {
             toggle && 
-                <div className='flex flex-col top-[329px] absolute w-full bg-fadeblue text-white animate-slide-in pl-[22px]'>
-                    <div className='flex items-center justify-between pr-[22px]'>
-                        <h1 className='py-4 font-extralight text-xl'>Check out our various products</h1>
-                        <span><MdOutlineArrowDownward className='text-xl' /></span>
-                    </div>
+                <div className='flex flex-col top-[62.2px] absolute w-full bg-fadeblue text-white 
+                animate-slide-in pl-[22px]'>
+
                     {
                         navBars.map((nav, index) => (
                             <div className=" text-base py-4 font-[400]" key={index}>
