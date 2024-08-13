@@ -78,7 +78,7 @@ const NavBar = () => {
             }
             {
             toggle && 
-                <div className='flex flex-col top-[62.2px] absolute w-full bg-fadeblue text-white 
+                <div className='flex flex-col top-[60px] absolute w-full bg-fadeblue text-white 
                 animate-slide-in pl-[22px]'>
 
                     {
@@ -122,7 +122,7 @@ const NavBar = () => {
             </div>
         </div>
         </div>
-        <div className='lg:flex justify-center items-center hidden lg:static bg-tomato text-white px-[10px] h-[50px] '>
+        <div className='lg:flex justify-center items-center hidden lg:static bg-tomato text-white px-[10px] h-[55px] '>
             {
                 navBars.map((nav, index) => (
                 <div className="px-[30px] text-sm text font-extralight" key={index}>
