@@ -27,7 +27,7 @@ const EnhanceLook = () => {
     <div className=' mt-[50px] w-[95%] mx-auto'>
         <h1 
           className='my-[50px] text-lg font-[700] text-fadeblue'>
-            YOU MAY ALSO FIND THIS APPEALING
+           {filteredProducts.length > 0 && 'YOU MAY ALSO FIND THIS APPEALING' } 
         </h1>
         <div 
           className='grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-9 mb-7 '>
