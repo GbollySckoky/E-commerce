@@ -11,6 +11,7 @@ import Loading from '../reusable/Loading'
 import Datas from '../reusable/Datas'
 import EnhanceLook from './EnhanceLook'
 import { FaHeart } from "react-icons/fa";
+import { toast } from 'react-toastify';
 
 const links = [
   {name:"New Arrivals", id:1},
@@ -37,6 +38,11 @@ const FilteredProductId = () => {
     }
     const handleActive = () =>{
       setActive((prev) => !prev)
+      if(!active){
+        toast.success(`${data.productName} liked successfully`)
+      }else{
+        toast.error(`${data.productName} removed successfully`)
+      }
     }
     
     const [data, setData]  = useState({})
@@ -130,7 +136,7 @@ const FilteredProductId = () => {
                   src={images} 
                   alt={data.productName} 
                   className='w-[200px] border border-black p-3 mb-5'/>
-                <div className='w-[400px] '>
+                <div className='lg:w-[400px] '>
                   {data.images && Array.isArray(data.images) && (
                     <div className='flex gap-5'>
                       { data.images.map((image) => (
