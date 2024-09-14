@@ -95,8 +95,8 @@ const FilteredProductId = () => {
   return (
     <div className='lg:pt-[164px] pt-[130px]'>
       <ul 
-        className='lg:flex items-center mt-[13px] justify-center bg-fadeblue 
-        text-white py-[15px] text-sm font-[200] lg:static hidden'>
+        className='lg:flex items-center justify-center bg-fadeblue 
+        text-white py-[15px]  mt-[19px] text-sm font-[200] lg:static hidden'>
           {links.map((link) => (
             <li key={link.id}>
                 <Link className='px-7'>{link.name}</Link>
